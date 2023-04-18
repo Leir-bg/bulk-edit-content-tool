@@ -1,0 +1,16 @@
+doctype html
+html(lang="en")
+include partials/head
+
+    body 
+
+    block content 
+        form(action="/", method="POST").dirForm 
+            fieldset 
+                legend Bulk Edit Files
+                input(type="text", placeholder="Folder path here..." name="dirPath")
+                input(type="submit", value="Search files")
+
+    
+
+include partials/footer

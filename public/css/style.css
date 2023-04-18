@@ -1,0 +1,163 @@
+*,
+*::before,
+*::after{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root{
+	--primary: #202124;
+	--secondary: #3c4043;
+	--tertiary: #9aa0a6;
+}
+
+body{
+	font-size: 18px;
+	font-family: 'system-ui';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--primary);
+	flex-direction: column;
+	height: 100%;
+}
+
+.nostyle{
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+}
+
+.breakrow, .breakcol{
+	flex: 1 0 100%;
+}
+
+.breakrow{
+	height: 0;
+	margin: -10px 0;
+}
+
+.breakcol{
+	width: 0;
+	margin: 0 -10px;
+}
+
+form{
+	color: #fff;
+	margin: 25px;
+}
+
+form > fieldset{
+	padding: 10px 20px;
+	border: none;
+}
+
+form fieldset fieldset{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	padding: 20px;
+	margin-bottom: 20px;
+	align-items: baseline;
+}
+
+.dirForm{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.dirForm input{
+	width: 100%;
+}
+
+.fileForm{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 40px;
+	justify-content: space-evenly;
+	align-items: baseline;
+	width: 100%;
+}
+
+.fileForm > fieldset{
+	width: 840px;
+	max-width: 100%;
+}
+
+.fileForm > fieldset > input{
+	background: none;
+	color: #fff;
+	font-weight: 800;
+}
+
+.fileForm fieldset fieldset input:nth-of-type(2n+1){
+	width: 25%;
+}
+
+.fileForm fieldset fieldset input:nth-of-type(2n){
+	flex: 1;
+}
+
+.fileForm button{
+	padding: 8px;
+    font-weight: 800;
+    color: var(--secondary);
+}
+
+fieldset, legend{
+	background-color: var(--secondary);
+	border-radius: 10px;
+}
+
+legend{
+	font-weight: 600;
+	padding: 5px 10px;
+	text-transform: uppercase;
+}
+
+input[type^="text"]{
+	padding: 10px;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+	font-size: 1rem;
+}
+
+input[type^="number"]{
+	padding: 10px;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+	font-size: .8rem;
+}
+
+form > fieldset > input[type^="checkbox"]{
+	margin-left: 10px;
+}
+
+.hidden, #filefield{
+	display: none;
+}
+
+input[type^="submit"]{
+	border: none;
+	padding: 10px;
+	text-transform: uppercase;
+	font-weight: 800;
+	color: var(--secondary);
+	border-radius: 4px;
+	font-size: 1.5rem;
+	margin: 20px auto 10px;
+	display: block;
+	letter-spacing: 1rem;
+	width: 500px;
+	max-width: 100%;
+}
+
+input[type^="submit"]:hover, input[type^="submit"]:focus{
+	opacity: 0.7;
+}
