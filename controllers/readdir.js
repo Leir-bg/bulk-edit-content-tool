@@ -16,12 +16,6 @@ searchRoute.post('/', (req, res, next) => {
             res.render('partials/gotfiles', {files: htmlFiles, path: dirPath})
         })
 
-        // fs.readdir(dirPath, (err, files) => {
-        //     let htmlFiles =  files.filter(file => path.extname(file) === '.html')
-        //     let orderedFiles = htmlFiles.map(val => parseInt(val)).sort((a, b) => a - b)
-        //     res.render('partials/gotfiles', {files: orderedFiles})
-        // })
-
     }catch(e){
         console.error(e)
     }

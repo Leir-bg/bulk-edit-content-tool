@@ -3,7 +3,7 @@ const path = require("path")
 const { getPortPromise } = require("portfinder")
 const server = require("./controllers/server")
 const readdir = require("./controllers/readdir")
-const updatefiles = require("./controllers/updatefiles")
+const updatefiles = require("./controllers/updatefiles_optimized")
 
 const app = express()
 
